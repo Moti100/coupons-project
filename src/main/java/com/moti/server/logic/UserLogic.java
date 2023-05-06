@@ -212,6 +212,7 @@ public class UserLogic {
         }
     }
 
+    //Test change for GitHub
     //    //This function is used for several logic functions and resources  validations
     void validateUserType(UserType userType) throws Exception {
         if (userType == null) {
