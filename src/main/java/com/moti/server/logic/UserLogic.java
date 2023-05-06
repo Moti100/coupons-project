@@ -192,7 +192,7 @@ public class UserLogic {
     //    //This function validates user data
     private void validateUser(UserEntity user) throws Exception {
         validateUserName(user.getUserName());
-        validateUserType(user.getUserType());
+        //validateUserType(user.getUserType());
         validateUserPassword(user.getPassword());
         Validation.validateId(user.getCompany().getId());
     }
@@ -214,11 +214,6 @@ public class UserLogic {
 
     //Test change for GitHub
     //    //This function is used for several logic functions and resources  validations
-    void validateUserType(UserType userType) throws Exception {
-        if (userType == null) {
-            throw new ServerException(ErrorType.INVALID_USER_TYPE, "User Type must have value");
-        }
-    }
 
     public boolean isUserExists(long id) {
         boolean isUserExists = iUserDal.existsById(id);
